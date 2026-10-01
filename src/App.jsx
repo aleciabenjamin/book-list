@@ -48,7 +48,7 @@ function App() {
 	return (
 		<main>
 			<h1>My Book List</h1>
-			<form onSubmit={addBook}>
+			<form className="book-input"onSubmit={addBook}>
 				<input
 					type="text"
 					value={formInput.title}
@@ -70,14 +70,14 @@ function App() {
 			<p>Number of books: {books.length}</p>
 			<ul>
 				{books.map((book) => (
-					<li key={book.id}>
+					<li key={book.id} class={book.read ? "read" : "not-read"}>
 						<h2>{book.title}</h2>
 						<p>by {book.author}</p>
 						<p>Status: {book.read ? "Read" : "Not Read"}</p>
 						<button onClick={() => toggleReadStatus(book.id)}>
 							Mark as {book.read ? "Not Read" : "Read"}
 						</button>
-						<button type="button" onClick={() => removeBook(book.id)}>
+						<button className="remove-button" type="button" onClick={() => removeBook(book.id)}>
 							Remove Book
 						</button>
 					</li>

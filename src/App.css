@@ -1,0 +1,28 @@
+.book-input {
+	margin-bottom: 1rem;
+}
+
+input {
+	margin-right: 1rem;
+}
+
+input:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.remove-button {
+	background-color: #ef4444;
+	color: white;
+	border: none;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+}
+
+.read {
+	background-color: #03731b;
+	color: white;
+	border: none;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+}
