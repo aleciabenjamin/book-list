@@ -41,6 +41,10 @@ function App() {
 		setFormInput({ title: "", author: "" });
 	}
 
+	function removeBook(id) {
+		setBooks(books.filter((b) => b.id !== id));
+	}
+
 	return (
 		<main>
 			<h1>My Book List</h1>
@@ -72,6 +76,9 @@ function App() {
 						<p>Status: {book.read ? "Read" : "Not Read"}</p>
 						<button onClick={() => toggleReadStatus(book.id)}>
 							Mark as {book.read ? "Not Read" : "Read"}
+						</button>
+						<button type="button" onClick={() => removeBook(book.id)}>
+							Remove Book
 						</button>
 					</li>
 				))}
